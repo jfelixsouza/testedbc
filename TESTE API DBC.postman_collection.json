@@ -80,13 +80,13 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{URL}}/users/461",
+					"raw": "{{URL}}/users/10",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"users",
-						"461"
+						"10"
 					]
 				}
 			},
@@ -151,11 +151,12 @@
 							"pm.test(\"validar status code 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
-							"pm.test(\"validar name no body\", function () {\r",
-							"    pm.response.to.have.body(\"teste dbc renner\");\r",
+							"\r",
+							"pm.test(\"validar campo name no body\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"teste dbc renner\");\r",
 							"});\r",
-							"pm.test(\"validar job no body\", function () {\r",
-							"    pm.response.to.have.body(\"analista de teste qa\");\r",
+							"pm.test(\"validar campo job no body\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"analista de teste qa\");\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -176,13 +177,13 @@
 					"raw": "{\r\n    \"name\": \"teste dbc renner\",\r\n    \"job\": \"analista de teste qa\"\r\n}"
 				},
 				"url": {
-					"raw": "{{URL}}/users/175",
+					"raw": "{{URL}}/users/12",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"users",
-						"175"
+						"12"
 					]
 				}
 			},
